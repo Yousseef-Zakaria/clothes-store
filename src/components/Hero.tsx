@@ -275,7 +275,7 @@ const HeroSection = () => {
           >
             اقوى <br />
             <span className="font-arabic-heavy text-transparent bg-clip-text bg-gradient-to-br from-white via-zinc-300 to-zinc-600 italic">
-              الكوليكشنز.
+              الكوليكشنز
             </span>
           </motion.h1>
 
