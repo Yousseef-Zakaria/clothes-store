@@ -1,0 +1,65 @@
+
+/* High-end Fashion Brand Theme Variables
+  Tailwind v4 uses native CSS variables for theming! 
+*/
+/* @theme {
+  --color-brand-dark: #050505; 
+  --color-brand-light: #ffffff;
+  --color-brand-accent: #FF5C00; 
+  --color-brand-muted: #1f1f1f;
+  
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Impact", "Inter", sans-serif; 
+} */
+/* 
+@layer base {
+  body {
+    background-color: var(--color-brand-dark);
+    color: var(--color-brand-light);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+} */
+/* 1. Import your Arabic fonts directly at the top */
+/* @import url('https://fonts.googleapis.com/css2?family=Amiri:ital@0;1&family=Cairo:wght@900&display=swap'); */
+
+@import "tailwindcss";
+
+/* High-end Fashion Brand Theme Variables */
+@theme {
+  /* Colors */
+  --color-brand-dark: #050505;
+  --color-brand-light: #ffffff;
+  --color-brand-accent: #FF5C00; 
+  --color-brand-muted: #1f1f1f;
+  
+  /* Typography */
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Impact", "Inter", sans-serif;
+  
+  /* The Arabic "Brutalist vs Elegant" Fonts */
+  --font-arabic-heavy: "Cairo", sans-serif;
+  --font-arabic-elegant: "Amiri", serif;
+
+  /* Custom Animations - Tailwind v4 will automatically create the `animate-marquee-rtl` utility class from this! */
+  --animate-marquee-rtl: marquee-rtl 15s linear infinite;
+}
+
+/* 2. Define the keyframes for the RTL Marquee */
+@keyframes marquee-rtl {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(50%); } 
+}
+
+/* 3. Base HTML/Body styles */
+@layer base {
+  body {
+    background-color: var(--color-brand-dark);
+    color: var(--color-brand-light);
+    /* Set the heavy Arabic font as the default for the whole document */
+    font-family: var(--font-arabic-heavy); 
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
